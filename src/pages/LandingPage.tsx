@@ -93,6 +93,9 @@ function PublicNav() {
           <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Contact
           </Link>
+          <Link to="/created-by" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Created By
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-2">
@@ -128,6 +131,9 @@ function PublicNav() {
             </Link>
             <Link to="/contact" className="block text-sm text-muted-foreground hover:text-foreground py-2">
               Contact
+            </Link>
+            <Link to="/created-by" className="block text-sm text-muted-foreground hover:text-foreground py-2">
+              Created By
             </Link>
             <div className="flex gap-2 pt-2">
               <Button variant="outline" size="sm" asChild>

@@ -49,8 +49,12 @@ export default function Dashboard() {
             <p className="text-sm text-muted-foreground">Welcome back, John! Here's your restaurant overview.</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm"><Plus className="h-4 w-4 mr-1" /> New Order</Button>
-            <Button size="sm"><UtensilsCrossed className="h-4 w-4 mr-1" /> Add Item</Button>
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/pos"><Plus className="h-4 w-4 mr-1" /> New Order</Link>
+            </Button>
+            <Button size="sm" asChild>
+              <Link to="/menu"><UtensilsCrossed className="h-4 w-4 mr-1" /> Add Item</Link>
+            </Button>
           </div>
         </div>
 

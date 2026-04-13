@@ -20,6 +20,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import Features from "./pages/Features";
+import CreatedBy from "./pages/CreatedBy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/created-by" element={<CreatedBy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

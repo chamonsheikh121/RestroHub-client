@@ -12,16 +12,30 @@ const categories = ["All Food", "Burgers", "Chicken", "Pizza", "Drinks", "Desser
 const foodItems = [
   { id: 1, name: "Classic Burger", price: 12.99, category: "Burgers", image: "🍔" },
   { id: 2, name: "Cheese Burger", price: 14.99, category: "Burgers", image: "🍔" },
-  { id: 3, name: "Grilled Chicken", price: 15.50, category: "Chicken", image: "🍗" },
-  { id: 4, name: "Chicken Wings", price: 11.99, category: "Chicken", image: "🍗" },
-  { id: 5, name: "Margherita Pizza", price: 13.99, category: "Pizza", image: "🍕" },
-  { id: 6, name: "Pepperoni Pizza", price: 15.99, category: "Pizza", image: "🍕" },
-  { id: 7, name: "Cola", price: 2.99, category: "Drinks", image: "🥤" },
-  { id: 8, name: "Fresh Juice", price: 4.99, category: "Drinks", image: "🧃" },
-  { id: 9, name: "Chocolate Cake", price: 7.99, category: "Desserts", image: "🍰" },
-  { id: 10, name: "Fries", price: 4.99, category: "Sides", image: "🍟" },
-  { id: 11, name: "BBQ Burger", price: 16.99, category: "Burgers", image: "🍔" },
-  { id: 12, name: "Onion Rings", price: 5.49, category: "Sides", image: "🧅" },
+  { id: 3, name: "Double Burger", price: 18.99, category: "Burgers", image: "🍔" },
+  { id: 4, name: "BBQ Burger", price: 16.99, category: "Burgers", image: "🍔" },
+  { id: 5, name: "Spicy Burger", price: 15.99, category: "Burgers", image: "🌶️" },
+  { id: 6, name: "Grilled Chicken", price: 15.50, category: "Chicken", image: "🍗" },
+  { id: 7, name: "Chicken Wings", price: 11.99, category: "Chicken", image: "🍗" },
+  { id: 8, name: "Fried Chicken", price: 13.99, category: "Chicken", image: "🍗" },
+  { id: 9, name: "Chicken Tikka", price: 14.99, category: "Chicken", image: "🍗" },
+  { id: 10, name: "Margherita Pizza", price: 13.99, category: "Pizza", image: "🍕" },
+  { id: 11, name: "Pepperoni Pizza", price: 15.99, category: "Pizza", image: "🍕" },
+  { id: 12, name: "Veggie Pizza", price: 14.99, category: "Pizza", image: "🍕" },
+  { id: 13, name: "Meat Lovers", price: 17.99, category: "Pizza", image: "🍕" },
+  { id: 14, name: "Cola", price: 2.99, category: "Drinks", image: "🥤" },
+  { id: 15, name: "Fresh Juice", price: 4.99, category: "Drinks", image: "🧃" },
+  { id: 16, name: "Iced Tea", price: 3.99, category: "Drinks", image: "🥶" },
+  { id: 17, name: "Coffee", price: 4.49, category: "Drinks", image: "☕" },
+  { id: 18, name: "Smoothie", price: 5.99, category: "Drinks", image: "🥤" },
+  { id: 19, name: "Chocolate Cake", price: 7.99, category: "Desserts", image: "🍰" },
+  { id: 20, name: "Cheesecake", price: 8.99, category: "Desserts", image: "🍰" },
+  { id: 21, name: "Ice Cream", price: 5.99, category: "Desserts", image: "🍨" },
+  { id: 22, name: "Brownie", price: 6.99, category: "Desserts", image: "🍫" },
+  { id: 23, name: "Fries", price: 4.99, category: "Sides", image: "🍟" },
+  { id: 24, name: "Onion Rings", price: 5.49, category: "Sides", image: "🧅" },
+  { id: 25, name: "Coleslaw", price: 3.99, category: "Sides", image: "🥗" },
+  { id: 26, name: "Mac & Cheese", price: 6.99, category: "Sides", image: "🍝" },
 ];
 
 const tables = Array.from({ length: 18 }, (_, i) => ({
@@ -158,32 +172,32 @@ Net         $${total.toFixed(2)}
           </div>
 
           {/* Food Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 overflow-y-auto flex-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 overflow-y-auto flex-1">
             {filtered.map(item => {
               const categoryColors: Record<string, string> = {
-                "Burgers": "from-orange-400 to-red-500",
-                "Chicken": "from-amber-400 to-orange-500",
-                "Pizza": "from-yellow-400 to-orange-500",
-                "Drinks": "from-blue-400 to-cyan-500",
-                "Desserts": "from-pink-400 to-rose-500",
-                "Sides": "from-green-400 to-emerald-500",
+                "Burgers": "from-gray-200 to-gray-300",
+                "Chicken": "from-sky-100 to-blue-100",
+                "Pizza": "from-amber-100 to-yellow-100",
+                "Drinks": "from-sky-200 to-sky-300",
+                "Desserts": "from-rose-100 to-pink-100",
+                "Sides": "from-green-100 to-green-200",
               };
-              const gradientClass = categoryColors[item.category] || "from-indigo-400 to-blue-500";
+              const gradientClass = categoryColors[item.category] || "from-indigo-200 to-blue-300";
               
               return (
                 <Card
                   key={item.id}
                   onClick={() => addToCart(item)}
-                  className="shadow-card hover:shadow-elevated transition-all duration-200 cursor-pointer group hover:scale-[1.05] overflow-hidden"
+                  className="shadow-sm hover:shadow-card transition-all duration-200 cursor-pointer group hover:scale-105 overflow-hidden border border-border/50 hover:border-primary/30"
                 >
-                  <CardContent className="p-0 h-full">
-                    <div className={`bg-gradient-to-br ${gradientClass} p-6 text-center relative overflow-hidden`}>
-                      <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                      <div className="text-5xl mb-2 group-hover:scale-125 transition-transform duration-300 relative z-10">{item.image}</div>
+                  <CardContent className="p-0 h-full flex flex-col">
+                    <div className={`bg-gradient-to-br ${gradientClass}  p-3 text-center relative overflow-hidden flex items-center justify-center h-16`}>
+                      <div className="absolute inset-0 opacity-5 group-hover:opacity-15 transition-opacity"></div>
+                      <div className="text-3xl group-hover:scale-120 transition-transform duration-300 relative z-10">{item.image}</div>
                     </div>
-                    <div className="p-3 text-center">
-                      <p className="text-sm font-semibold text-foreground truncate">{item.name}</p>
-                      <p className="text-sm font-bold text-primary mt-1">${item.price.toFixed(2)}</p>
+                    <div className="p-2 text-center flex-1 flex flex-col justify-between">
+                      <p className="text-xs font-semibold text-foreground truncate leading-tight">{item.name}</p>
+                      <p className="text-xs font-bold text-primary mt-0.5">${item.price.toFixed(2)}</p>
                     </div>
                   </CardContent>
                 </Card>
