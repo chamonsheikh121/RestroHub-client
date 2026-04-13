@@ -1,7 +1,7 @@
 import { PublicNav, PublicFooter } from "./LandingPage";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, HelpCircle, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, HelpCircle, MessageSquare, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -30,13 +30,14 @@ export default function Contact() {
       <section className="relative overflow-hidden pt-24 pb-12 px-8">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 font-semibold text-sm mb-6">
-            Connect with us
+            <MessageSquare className="h-4 w-4" />
+            Let's Talk About Your Restaurant
           </div>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
-            We're here to help you grow.
+            Questions? We Have Experience.
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Have questions about RestroHub? Our support team is here to help you succeed. Get in touch with us today.
+            Whether you're looking to cut costs, increase covers, or manage chaos across multiple locations - our team has done it. Let's discuss your specific challenges and find the right solution.
           </p>
         </div>
 

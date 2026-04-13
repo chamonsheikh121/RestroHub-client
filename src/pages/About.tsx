@@ -30,20 +30,20 @@ const teamMembers = [
 const timeline = [
   {
     year: "2018",
-    title: "The Beginning",
-    description: "RestroHub was founded by restaurant owners who understood the pain of managing multiple systems. We set out to build better restaurant management software.",
+    title: "The Problem We Faced",
+    description: "Our founder ran 3 restaurants using 7 different systems. Lost hours daily switching between apps. Food waste was out of control. Staff turnover was 60%/year. No real data. We decided to fix it.",
     color: "from-indigo-600",
   },
   {
     year: "2020",
-    title: "Rapid Growth",
-    description: "We launched our full platform suite and were helping over 500 restaurants streamline their operations with real-time data and integrated management.",
+    title: "First 500 Restaurants",
+    description: "Launched a unified platform. Restaurants reported 30% less food waste, 20% faster service, 25% higher check average. Customers actually liked using it. We knew we were onto something.",
     color: "from-blue-600",
   },
   {
-    year: "2024",
-    title: "Market Leader",
-    description: "RestroHub now powers over 1,000 restaurants worldwide, with advanced analytics, AI-driven insights, and integrations that make restaurant management simpler.",
+    year: "2026",
+    title: "1000+ Restaurants Growing",
+    description: "Processing 50M+ orders annually. Restaurants average 15-25% cost reduction. Some increased revenue by 30% by using our data properly. That's not a tool - that's a business transformation.",
     color: "from-indigo-500",
   },
 ];
@@ -62,10 +62,10 @@ export default function About() {
               <span className="text-sm font-bold tracking-widest text-indigo-600 uppercase">Our Narrative</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
-              The story behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">RestroHub.</span>
+              Built by <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">Restaurateurs, For Restaurants</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-              Built by restaurant owners for restaurant owners. We created RestroHub to simplify operations and help restaurants grow with confidence.
+              We know your pain. Tired of juggling 5+ systems? Hours lost to manual processes? Wasted food? Impossible multi-location management? We built RestroHub to solve what the industry ignores.
             </p>
             <div className="flex items-center gap-12">
               <div className="flex flex-col">
